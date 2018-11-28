@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="connectToNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh2-7V-33x">
+                                <rect key="frame" x="131" y="293" width="113" height="34"/>
+                                <color key="backgroundColor" red="0.56864997279999996" green="0.42384005899999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Войти">
+                                    <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YiP-v1-U05"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TTx-bs-qkf">
+                                <rect key="frame" x="79" y="87" width="217" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="DVe-R3-pku"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Авторизация"/>
+                                    <segment title="Регистрация"/>
+                                </segments>
+                                <color key="tintColor" red="0.56864997279999996" green="0.42384005899999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUD-C6-hBC">
+                                <rect key="frame" x="64" y="163" width="247" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnc-bm-gfb">
+                                <rect key="frame" x="64" y="201" width="247" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kh2-7V-33x" secondAttribute="trailing" constant="131" id="2IV-0t-pVc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TTx-bs-qkf" secondAttribute="trailing" constant="79" id="7tM-hI-fXf"/>
+                            <constraint firstItem="Kh2-7V-33x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="Bwg-TY-kIm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fnc-bm-gfb" secondAttribute="trailing" constant="64" id="HXh-P7-mGV"/>
+                            <constraint firstItem="eUD-C6-hBC" firstAttribute="top" secondItem="TTx-bs-qkf" secondAttribute="bottom" constant="48" id="MM8-Ld-JNe"/>
+                            <constraint firstItem="TTx-bs-qkf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="OX7-wO-PWh"/>
+                            <constraint firstItem="TTx-bs-qkf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="UmV-DG-Top"/>
+                            <constraint firstItem="fnc-bm-gfb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="blC-ta-fBm"/>
+                            <constraint firstItem="eUD-C6-hBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="gcO-hI-QT3"/>
+                            <constraint firstItem="Kh2-7V-33x" firstAttribute="top" secondItem="fnc-bm-gfb" secondAttribute="bottom" constant="62" id="iTi-eX-4FI"/>
+                            <constraint firstItem="fnc-bm-gfb" firstAttribute="top" secondItem="eUD-C6-hBC" secondAttribute="bottom" constant="8" id="uZg-sk-Aew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eUD-C6-hBC" secondAttribute="trailing" constant="64" id="v8p-Ub-hmi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="pYm-sU-cA8" appends="YES" id="Xcm-ED-GQu"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="Kh2-7V-33x" id="Q4v-pj-W1p"/>
+                        <outlet property="emailText" destination="eUD-C6-hBC" id="fPQ-JD-81v"/>
+                        <outlet property="passText" destination="fnc-bm-gfb" id="phl-yt-LrB"/>
+                        <outlet property="segContr" destination="TTx-bs-qkf" id="kaa-XS-YQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="pYm-sU-cA8">
+                    <connections>
+                        <action selector="Tap:" destination="BYZ-38-t0r" id="Ruu-iF-JLT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-76" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
