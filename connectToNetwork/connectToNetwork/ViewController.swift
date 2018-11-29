@@ -34,8 +34,14 @@ class ViewController: UIViewController {
                 Auth.auth().signIn(withEmail: emailText.text!, password: passText.text!) { (user, error) in
                     if user != nil{
                         print("Success")
+                        let alert = UIAlertController(title: "Авторизация", message: "Вы авторизированы!", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                     else{
+                        let alert = UIAlertController(title: "Авторизация", message: "Такого пользователя не существует!", preferredStyle: .alert)
+                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                         if let myError = error?.localizedDescription{
                             print(myError)
                         }
@@ -49,10 +55,16 @@ class ViewController: UIViewController {
                 Auth.auth().createUser(withEmail: emailText.text!, password: passText.text!) { (user, error) in
                     if user != nil{
                         print("Success")
+                        let alert = UIAlertController(title: "Регистрация", message: "Вы зарегестрированы!", preferredStyle: .alert)
+                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
                     }
                     else{
                         if let myError = error?.localizedDescription{
                             print(myError)
+                            let alert = UIAlertController(title: "Регистрация", message: myError, preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
                         }
                         else{
                             print("error!")
@@ -61,6 +73,5 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
     }
 }

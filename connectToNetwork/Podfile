@@ -8,6 +8,8 @@ target 'connectToNetwork' do
   # Pods for connectToNetwork
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  
 
 	
 
