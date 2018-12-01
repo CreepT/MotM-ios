@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import MapKit
 
 let primaryColor = UIColor(red: 210/255, green: 109/255, blue: 180/255, alpha: 1)
 let secondaryColor = UIColor(red: 255/255, green: 153/255, blue: 0/255, alpha: 1)
